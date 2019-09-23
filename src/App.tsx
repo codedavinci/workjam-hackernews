@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { StoryConsumer } from './components/StoryContext';
+import StoryList from './components/StoryList';
+import StoryCommentsViewer from './components/StoryCommentsViewer';
+
+
+
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoryConsumer>
+      {({ state }) => {
+        return (
+          <main className="App">
+            <header className="App-header"> <strong>WORKJAM</strong> <i>THINGY</i> </header>
+            {state.selectedStory ? <StoryCommentsViewer /> : <StoryList />}
+          </main>
+        )
+
+      }}
+
+    </StoryConsumer>
+
   );
 }
 
-export default App;
+export default App
