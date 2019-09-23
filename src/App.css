@@ -1,22 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
 
 .App-header {
+  text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
   color: white;
 }
 
+
 .App-link {
   color: #09d3ac;
+}
+
+
+.story-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.story-item-wrapper {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  flex-basis: 80px;
+}
+
+
+.story-link {
+  padding-left: 30px;
+}
+.btn-view-comment {
+  border: 1px solid red;
+  margin-right: 30px;
+  width: 200px;
+  height: 30px;
+  border-radius: 0.2em;
+  border: 1px solid lightgray;
+  background-color: teal; 
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 70%;
+}
+
+.comment-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment-wrapper h2 {
+  margin-left: 10px;
+}
+
+.comment-item {
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+
+.comment-item span {
+  color: gray;
+}
+
+.comment-item-text {
+  line-height: 20px;
+  font-size: 2
 }
